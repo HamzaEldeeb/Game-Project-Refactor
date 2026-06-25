@@ -46,3 +46,22 @@ The original version contained tightly coupled code, and the refactored version 
 ---
 
 ## 🏗️ Project Structure
+
+```text
+GameProjectRefactor
+│
+├── Question
+│   ├── IQuestion.cs
+│   └── Question.cs
+│
+├── Level
+│   ├── BaseLevel.cs
+│   ├── EasyLevel.cs
+│   ├── MediumLevel.cs
+│   ├── HardLevel.cs
+│   └── LevelManager.cs
+│
+├── MathGame.cs
+├── Difficulty.cs
+├── Statistics.cs
+└── Program.cs
