@@ -1,47 +1,40 @@
 # 🎮 Game Project Refactor
 
-A console-based Math Game that was refactored using **Object-Oriented Programming (OOP)** principles and clean code practices.
-
-The goal of this project is to transform a poorly structured codebase into a more maintainable, readable, and extensible design.
+A C# Console Application that demonstrates how to refactor a monolithic Math Game into a cleaner, maintainable, and scalable Object-Oriented Design using OOP principles.
 
 ---
 
-## 📌 Project Overview
+## 📖 Overview
 
-This project demonstrates the process of refactoring an existing game application by improving:
+This project started as a single large class containing all game logic, level management, question generation, user interaction, and statistics tracking.
 
-- Code organization
-- Class responsibilities
-- Maintainability
+The project was then refactored into multiple classes with clear responsibilities to improve:
+
 - Readability
-- Extensibility
+- Maintainability
+- Scalability
+- Reusability
+- Code Organization
 
-The original version contained tightly coupled code, and the refactored version applies better software design practices.
+The goal was to practice applying real-world refactoring techniques and Object-Oriented Programming concepts.
 
 ---
 
 ## 🚀 Features
 
-- Multiple difficulty levels:
-  - Easy
-  - Medium
-  - Hard
+### Before Refactoring
+- Large class handling everything
+- Mixed responsibilities
+- Difficult to maintain
+- Difficult to extend
 
-- Different mathematical operations:
-  - Addition
-  - Subtraction
-  - Multiplication
-  - Division
-
-- Random question generation
-
-- Player score tracking
-
-- Game statistics
-
-- Level management
-
-- Clean separation of responsibilities between classes
+### After Refactoring
+- Level-based architecture
+- Question abstraction
+- Statistics management
+- Separation of concerns
+- Cleaner code structure
+- Easier maintenance
 
 ---
 
@@ -50,9 +43,9 @@ The original version contained tightly coupled code, and the refactored version 
 ```text
 GameProjectRefactor
 │
-├── Question
-│   ├── IQuestion.cs
-│   └── Question.cs
+├── CodeBeforeRefactore.cs
+├── Difficulty.cs
+├── Statistics.cs
 │
 ├── Level
 │   ├── BaseLevel.cs
@@ -61,7 +54,165 @@ GameProjectRefactor
 │   ├── HardLevel.cs
 │   └── LevelManager.cs
 │
-├── MathGame.cs
-├── Difficulty.cs
-├── Statistics.cs
-└── Program.cs
+├── Question
+│   ├── IQuestion.cs
+│   └── Question.cs
+│
+└── GameProjectAfterRefactor.cs
+```
+
+---
+
+## 🧠 OOP Concepts Used
+
+### Abstraction
+Implemented using:
+
+```csharp
+BaseLevel
+IQuestion
+```
+
+### Inheritance
+
+```csharp
+EasyLevel : BaseLevel
+MediumLevel : BaseLevel
+HardLevel : BaseLevel
+```
+
+### Polymorphism
+
+Different levels override:
+
+```csharp
+Min
+Max
+NumberOfQuestions
+Operators
+```
+
+through the abstract base class.
+
+### Encapsulation
+
+Each class manages its own behavior and responsibilities.
+
+---
+
+## 🎯 Levels
+
+### Easy Level
+- Numbers: 0 - 10
+- Operators:
+  - +
+  - -
+
+### Medium Level
+- Numbers: 0 - 15
+- Operators:
+  - +
+  - -
+  - *
+
+### Hard Level
+- Numbers: 0 - 20
+- Operators:
+  - +
+  - -
+  - *
+  - /
+
+---
+
+## 📊 Statistics Tracking
+
+The game tracks:
+
+- Total Questions Played
+- Correct Answers
+- Incorrect Answers
+- Addition Questions
+- Subtraction Questions
+- Multiplication Questions
+- Division Questions
+
+---
+
+## 🔄 Refactoring Goals
+
+This project focuses on transforming:
+
+### Before
+
+```csharp
+One class
+Many responsibilities
+Hard to maintain
+```
+
+into
+
+### After
+
+```csharp
+Multiple focused classes
+Single Responsibility Principle
+Reusable components
+Clean architecture
+```
+
+---
+
+## 📚 What I Learned
+
+Through this project I practiced:
+
+- Object-Oriented Programming (OOP)
+- Abstraction
+- Inheritance
+- Polymorphism
+- Interfaces
+- Refactoring Legacy Code
+- Separation of Concerns
+- Clean Code Principles
+- Project Organization
+- Console Application Design
+
+---
+
+## 🛠️ Technologies Used
+
+- C#
+- .NET
+- Console Applications
+- Object-Oriented Programming
+
+---
+
+## ▶️ Run the Project
+
+```bash
+git clone https://github.com/HamzaEldeeb/Game-Project-Refactor.git
+```
+
+Open the solution and run:
+
+```bash
+dotnet run
+```
+
+---
+
+## 👨‍💻 Author
+
+Hamza Eldeeb
+
+Aspiring Full Stack .NET Developer
+
+Focused on:
+- C#
+- OOP
+- Data Structures
+- Problem Solving
+- Clean Architecture
