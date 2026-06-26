@@ -105,23 +105,23 @@ Each class manages its own behavior and responsibilities.
 ### Easy Level
 - Numbers: 0 - 10
 - Operators:
-  - +
-  - -
+  - `+`
+  - `-`
 
 ### Medium Level
 - Numbers: 0 - 15
 - Operators:
-  - +
-  - -
-  - *
+  - `+`
+  - `-`
+  - `*`
 
 ### Hard Level
 - Numbers: 0 - 20
 - Operators:
-  - +
-  - -
-  - *
-  - /
+  - `+`
+  - `-`
+  - `*`
+  - `/`
 
 ---
 
@@ -190,25 +190,11 @@ Through this project I practiced:
 
 ---
 
-## ▶️ Run the Project
-
-```bash
-git clone https://github.com/HamzaEldeeb/Game-Project-Refactor.git
-```
-
-Open the solution and run:
-
-```bash
-dotnet run
-```
-
----
-
 ## 👨‍💻 Author
 
 Hamza Eldeeb
 
-Aspiring Full Stack .NET Developer
+Passionate Software Developer |Full stack .Net Developer |C# Developer 
 
 Focused on:
 - C#
